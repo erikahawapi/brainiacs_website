@@ -1,0 +1,367 @@
+/* Base */
+html, body {
+  margin: 0; /* reset default margin */
+  padding: 0; /* reset default padding */
+  height: 100%; /* full height of screen */
+  overflow-y: auto; /* allow vertical scrolling */
+  font-family: 'Poppins', sans-serif; 
+  background-color: #edf0dc;
+}
+
+/* Header Base */
+header {
+  background-color: #2d4d39;
+  color: #edf0dc; /* text color */
+  padding: 1rem 0; /* top & bottom padding = 1rem */
+}
+
+/* Header Text */
+header h1 {
+  font-size: 2.5rem;
+  margin: 0; /* reset default margin */
+}
+
+/* Navigation Base */
+.container {
+  max-width: 900px;
+  margin: 0 auto; /* center horizontally */
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* center vertically */
+}
+
+/* Navigation List */
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none; /* remove default bullet points */
+  margin: 0; /* reset default margin */
+  padding: 0; /* reset default padding */
+}
+
+/* Navigation Link */
+nav a {
+  color: #edf0dc;
+  text-decoration: none; /* remove default underline */
+}
+
+/* Navigation Link - Hover Effect */
+nav a.active,
+nav a:hover {
+  font-weight: bold;
+}
+
+/* Footer Base */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2d4d39;
+  color: #edf0dc; /* text color */
+  margin-top: 40px;
+}
+
+/* Button Base */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 auto; /* center horizontally */
+  border-radius: 5px; /* round corners */
+  text-decoration: none; /* remove default underline */
+  transition: transform 0.3s ease; /* smooth transition effect */
+}
+
+/* Button - Hover Effect */
+.button:hover {
+  transform: scale(1.05); /* increase size */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button - Active (Click) */
+.button:active {
+  transform: scale(0.95); /* increase size */
+}
+
+/* Dark Button Base */
+.button-dark {
+  background: #2d4d39;
+  color: #edf0dc; /* text color */
+}
+
+/* Light Button Base */
+.button-light {
+  background: #edf0dc;
+  color: #2d4d39; /* text color */
+}
+
+/* Section Title */
+.section-title h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: #2d4d39;
+}
+
+/* Subtopic */
+.member h3,
+.project h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+  color: #edf0dc;
+}
+
+/* Subtopic Description */
+.member p,
+.project p {
+  font-size: 0.85rem;
+  color: #edf0dc;
+}
+
+/* -------------------- "Home" Page -------------------- */
+/* Home Base */
+.home-about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem auto; /* center horizontally */
+  padding: 1rem;
+  max-width: 900px;
+}
+
+/* About Base */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  max-width: 500px;
+}
+
+/* About - Introduction */
+.about p {
+  text-align: justify;
+  max-width: 500px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  justify-self: start;
+}
+
+/* About - Member Name */
+.team-picture h3 {
+  color: #2d4d39;
+}
+
+/* About - Team Picture */
+.team-picture {
+  position: relative;
+  width: 100%;
+  min-height: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Picture */
+.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* center image */
+  text-align: center;
+}
+
+/* Botoom-left Picture */
+.bottom-left {
+  position: absolute;
+  top: 100px; 
+  left: 5%;
+  text-align: center;
+}
+
+/* Bottom-right Picture */
+.bottom-right {
+  position: absolute;
+  top: 100px;
+  right: 5%;
+  text-align: center;
+}
+
+/* Pictures */
+.home-about-section img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; /* round corner */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Card */
+.project {
+  width: 300px;
+  background-color: #2d4d39;
+  border-radius: 12px; /* round corner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Project Card - Row */
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem 20px;
+  max-width: 700px;
+  margin: 0 auto; /* center horizontally */
+  justify-items: center;
+}
+
+/* Responsive - Mobile Device */
+@media (max-width: 768px) {
+  .project {
+    max-width: 300px;
+    margin: 0 auto; /* center horizontally */
+  }
+
+  .project-row {
+    grid-template-columns: repeat(1, 1fr); /* single column */
+    padding: 0 10px;
+  }
+}
+/* -------------------- End of "Home" Page -------------------- */
+
+/* -------------------- "About Us" Page -------------------- */
+/* Introduction of Team */
+.about-section .intro {
+  max-width: 800px;
+  margin: 0 auto 40px; /* center horizontally */
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6; /* vertical spacing - line */
+}
+
+/* Member Card */
+.member {
+  width: 200px;
+  background-color: #2d4d39;
+  border-radius: 12px; /* round corner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Member Card - Row */
+.team-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem 20px;
+  max-width: 800px;
+  margin: 0 auto; /* center horizontally */
+  justify-items: center;
+}
+
+/* Member Profile Photo */
+.member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; /* round corner */
+  border: 3px solid #edf0dc; /* solid border */
+  margin-bottom: 15px;
+}
+
+/* Responsive - Mobile Device */
+@media (max-width: 768px) {
+  .member {
+    max-width: 250px;
+    margin: 0 auto; /* center horizontally */
+  }
+
+  .member img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-row {
+    grid-template-columns: repeat(1, 1fr); /* single column */
+    padding: 0 10px;
+  }
+}
+/* -------------------- End of "About Us" Page -------------------- */
+
+/* -------------------- "Our Projects" Page -------------------- */
+/* Project Base */
+.project-section {
+  display: grid;
+  grid-template-rows: repeat(2, auto); /* 2 row */
+  gap: 1rem; /* vertical spacing */
+  padding: 1rem 20px;
+}
+
+/* Project Card */
+.project-card {
+  background-size: cover; /* background size = card size */
+  background-position: center;
+  text-align: justify;
+  color: #edf0dc; /* text color */
+  padding: 20px;
+  border-radius: 12px; /* round corner */
+  overflow: hidden;
+  position: relative;
+  min-height: 250px;
+  max-width: 800px;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Project Card Title */
+.project-card h2 {
+  margin-top: 0; /* reset default margin */
+}
+
+/* Project Card - Decoration */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0; /* place decoration behind content */
+}
+
+/* Project Card - Content */
+.project-card * {
+  position: relative;
+  z-index: 1; /* place content above decoration */
+}
+
+/* Project Introduction */
+.project-intro {
+  text-align: justify;
+  margin-bottom: 1rem;
+  line-height: 1.6; /* vertical spacing - line */
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+/* EzPrint */
+.ezprint {
+  background-image: url('EZPrint.jpg');
+}
+
+/* HydraMate */
+.hydramate {
+  background-image: url('HydraMate.jpg');
+}
+
+/* Responsive - Mobile Device */
+@media (max-width: 768px) {
+  .project-section {
+    grid-template-columns: 1fr; /* single column */
+  }
+}
+/* -------------------- End of "Our Projects" Page -------------------- */
