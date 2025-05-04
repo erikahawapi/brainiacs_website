@@ -117,6 +117,25 @@ footer {
   color: #edf0dc;
 }
 
+/* Responsive - Mobile Device */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+    margin: 0; /* reset default margin */
+  }
+
+  nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none; /* remove default bullet points */
+    margin: 0; /* reset default margin */
+    padding: 0; /* reset default padding */
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+}
 /* -------------------- "Home" Page -------------------- */
 /* Home Base */
 .home-about-section {
@@ -144,6 +163,7 @@ footer {
   text-align: justify;
   max-width: 500px;
   font-size: 1rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   margin-left: 0;
   justify-self: start;
@@ -221,6 +241,41 @@ footer {
 
 /* Responsive - Mobile Device */
 @media (max-width: 768px) {
+  .about p {
+    text-align: justify;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+    justify-self: start;
+  
+  }
+  .team-picture h3 {
+    color: #2d4d39;
+    font-size: 15px;
+  }
+
+  .team-picture {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  .top,
+  .bottom-left,
+  .bottom-right {
+    position: static;
+    transform: none;
+    margin-bottom: 5px; /* space between stacked images */
+  }
+
+  .home-about-section img {
+    width: 60px;
+    height: 60px;
+  }
+
   .project {
     max-width: 300px;
     margin: 0 auto; /* center horizontally */
